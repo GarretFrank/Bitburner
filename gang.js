@@ -163,7 +163,11 @@ export async function main(ns) {
 	/** Main program loop. Check ascensions, check recruiting, check to see whether it's time to grow the gang. */
 	while (true) {
 		var gangNames = ns.gang.getMemberNames()
-		var firstGuySTR = ns.gang.getMemberInformation(gangNames[0]).str
+		if (gangNames.length > 0) {
+			var firstGuySTR = ns.gang.getMemberInformation(gangNames[0]).str
+		} else {
+			var firstGuySTR = 0
+		}
 
 		checkAscension(gangNames)
 
