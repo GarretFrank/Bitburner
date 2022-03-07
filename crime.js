@@ -16,6 +16,6 @@ export async function main(ns) {
 			break;
 		}
 	}
-	ns.sleep(1000)
+	await ns.sleep(1000)
 	ns.run("gang.js")
 }
