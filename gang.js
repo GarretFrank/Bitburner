@@ -144,6 +144,7 @@ export async function main(ns) {
 		}
 	}
 
+	/** Try to recruit new members */
 	function checkRecruiting(gangNames,newGuyNames) {
 		for (let i in newGuyNames) {
 			if (!(gangNames.includes(newGuyNames[i]))) {
@@ -159,6 +160,7 @@ export async function main(ns) {
 	var newGuyNames = ["Paul","Pedro","Pippin","Party","Platypus","Plato","Persimmon","Percival","Pinchy","Paunchy","Pin","Prinny"]
 	var memberCount = ns.gang.getMemberNames().length
 
+	/** Main program loop. Check ascensions, check recruiting, check to see whether it's time to grow the gang. */
 	while (true) {
 		var gangNames = ns.gang.getMemberNames()
 		var firstGuySTR = ns.gang.getMemberInformation(gangNames[0]).str

@@ -1,4 +1,8 @@
 /** @param {NS} ns **/
+
+/** Commit the specified crime until karma is low enough to create a gang, then create the gang, then start the
+ * gang management script. */
+
 export async function main(ns) {
 	let crimeCount = 0;
 	let crimeTime = ns.getCrimeStats(ns.args[0]).time + 250;
